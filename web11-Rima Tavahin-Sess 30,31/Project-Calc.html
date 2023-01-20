@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Calculator using HTML, CSS and JavaScript </title>
+    <style>
+        body {
+            background-color: rgb(180, 232, 250);
+        }
+
+        .calculator {
+            padding: 10px;
+            border-radius: 10px;
+            width: 650px;
+            height: 600px;
+            /* margin: auto; */
+            margin: 50px auto;
+            background-color: #fff;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+        }
+
+        .display-box {
+            width: 96%;
+            height: 65%;
+            font-size: 18px;
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            background-color: black;
+            border: 1px solid black ;
+            color: white;
+            border-radius: 5px;
+            
+            /* padding-left: 5px; */
+
+        }
+
+        .button {
+            width: 100%;
+            height: 70%;
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            font-size: 28px;
+            background-color: black;
+            color: white;
+            /* border: 1px solid black ; */
+            border: none;
+            border-radius: 50px;
+            
+        }
+
+    </style>
+</head>
+
+<body>
+    
+    <table class="calculator">
+        <tr>
+            <td colspan="3"> <input class="display-box" type="text" id="result" disabled /> </td>
+            <td> <input class="button" type="button" value="C" onclick="clearScreen()"
+                    style="background-color: red" /> </td>
+        </tr>
+        <tr>
+            <td> <input class="button" type="button" value="1" onclick="display('1')" /> </td>
+            <td> <input class="button" type="button" value="2" onclick="display('2')" /> </td>
+            <td> <input class="button" type="button" value="3" onclick="display('3')" /> </td>
+            <td> <input class="button" type="button" value="&#247" onclick="display('/')"
+                    style='background-color:lightgreen;' /> </td>
+        </tr>
+        <tr>
+            <td> <input class="button" type="button" value="4" onclick="display('4')" /> </td>
+            <td> <input class="button" type="button" value="5" onclick="display('5')" /> </td>
+            <td> <input class="button" type="button" value="6" onclick="display('6')" /> </td>
+            <td> <input class="button" type="button" value="-" onclick="display('-')"
+                    style='background-color:rgb(250, 173, 186);' /> </td>
+        </tr>
+        <tr>
+            <td> <input class="button" type="button" value="7" onclick="display('7')" /> </td>
+            <td> <input class="button" type="button" value="8" onclick="display('8')" /> </td>
+            <td> <input class="button" type="button" value="9" onclick="display('9')" /> </td>
+            <td> <input class="button" type="button" value="+" onclick="display('+')"
+                    style='background-color:lightslategrey;' /> </td>
+        </tr>
+        <tr>
+            <td> <input class="button" type="button" value="." onclick="display('.')" /> </td>
+            <td> <input class="button" type="button" value="0" onclick="display('0')" /> </td>
+            <td> <input class="button" type="button" value="=" onclick="calculate()"
+                    style="background-color: red" /> </td>
+            <td> <input class="button" type="button" value="x" onclick="display('*')"
+                    style='background-color:orange' /> </td>
+        </tr>
+    </table>
+    <script>
+
+        function clearScreen() {
+            document.getElementById("result").value = "";
+        }
+        function display(value) {
+            document.getElementById("result").value += value;
+        }
+        function calculate() {
+            var p = document.getElementById("result").value;
+            var q = eval(p);
+            document.getElementById("result").value = q;
+        }
+    </script>
+</body>
+
+</html>

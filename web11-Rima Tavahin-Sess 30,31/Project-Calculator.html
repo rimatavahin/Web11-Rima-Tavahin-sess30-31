@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>using HTML</title>
+    <style>
+        
+       *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+       }
+       body{
+        background-color: rgb(180, 232, 250);
+       }
+       input{
+        width: 150px;
+        height: 100px;
+        font-size: 75px;
+        background-color: #000;
+        margin: 10px;
+        border-radius: 50px;
+        color: #fff;
+        border-style: none;
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+       }
+       #myform{
+        text-align: center;
+        margin-top: 20px;
+       }
+
+    </style>
+</head>
+<body>
+    <form id="myform" name="calc" action="">
+        <input name="display" style = "width: 675px;height: 100px; text-align: center;background-color: rgb(7, 7, 7);">
+        <br>
+        <input type="button" value="1" onclick="calc.display.value+='1'">
+        <input type="button" value="2" onclick="calc.display.value+='2'">
+        <input type="button" value="3" onclick="calc.display.value+='3'">
+        <input type="button" value="+" onclick="calc.display.value+='+'" style="background-color: lightgreen;">
+        <br>
+        <input type="button" value="4" onclick="calc.display.value+='4'">
+        <input type="button" value="5" onclick="calc.display.value+='5'">
+        <input type="button" value="6" onclick="calc.display.value+='6'">
+        <input type="button" value="-" onclick="calc.display.value+='-'" style="background-color: rgb(250, 173, 186);">
+        <br>
+        <input type="button" value="7" onclick="calc.display.value+='7'">
+        <input type="button" value="8" onclick="calc.display.value+='8'">
+        <input type="button" value="9" onclick="calc.display.value+='9'">
+        <input type="button" value="x" onclick="calc.display.value+='*'" style="background-color: orange;">
+        <br>
+        <input type="button" value="0" onclick="calc.display.value+='0'">
+        <input type="button" value="C" onclick="calc.display.value=''" style="background-color: red;">
+        <input type="button" value="=" onclick="calc.display.value=eval(calc.display.value)">
+        <input type="button" value="&#247" onclick="calc.display.value+='/'" style="background-color: lightslategrey;">
+
+    </form>
+</body>
+</html>
